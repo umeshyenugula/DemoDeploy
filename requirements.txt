@@ -1,0 +1,12 @@
+Flask
+pymongo
+python-dotenv
+cloudinary
+pandas
+Pillow
+qrcode
+reportlab
+requests
+dnspython
+gunicorn
+python-dotenv

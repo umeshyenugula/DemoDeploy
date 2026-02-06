@@ -1,0 +1,55 @@
+<section class="add-certificates-section">
+  <h2>Create Certificate Event</h2>
+
+  <form id="certificateEventForm" enctype="multipart/form-data">
+
+    <!-- YEAR -->
+    <div class="form-group">
+      <label for="certYear">Year</label>
+      <select name="year" id="certYear" required>
+        <option value="">Select Year</option>
+        <option value="2026">2026</option>
+        <option value="2025">2025</option>
+        <option value="2024">2024</option>
+      </select>
+    </div>
+
+    <!-- EVENT NAME -->
+    <div class="form-group">
+      <label for="certEventName">Event Name</label>
+      <input
+        type="text"
+        name="event_name"
+        id="certEventName"
+        placeholder="Hackathon / Workshop / Seminar"
+        required
+      >
+    </div>
+
+    <!-- DATE -->
+    <div class="form-group">
+      <label for="certDate">Event Date</label>
+      <input type="date" name="date" id="certDate" required>
+    </div>
+
+    <!-- CSV UPLOAD -->
+    <div class="form-group">
+      <label for="participantsCsv">
+        Participants CSV
+        <small>(columns: name, position)</small>
+      </label>
+      <input
+        type="file"
+        name="participants_csv"
+        id="participantsCsv"
+        accept=".csv"
+        required
+      >
+    </div>
+
+    <button type="submit" class="submit-btn">
+      Save Certificate Event
+    </button>
+
+  </form>
+</section>

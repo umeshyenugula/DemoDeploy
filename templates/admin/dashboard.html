@@ -1,0 +1,22 @@
+<section class="update-hero-section">
+    <h2>Update Hero Section</h2>
+
+    <form id="heroForm" class="hero-update-form" method="POST" enctype="multipart/form-data">
+        
+        <input type="text" id="heroTitle" name="heroTitle" placeholder="Enter title" required>
+
+        <input type="text" id="btn1Label" name="btn1Label" placeholder="Button Name" required>
+
+        <textarea id="btn1Link" name="btn1Link" placeholder="Paste embedded code OR # OR URL" style="min-height:120px;" required></textarea>
+
+        <label style="margin-top:10px; display:block;">Banner Image (Optional)</label>
+        <input type="file" id="heroBanner" name="heroBanner" accept="image/*">
+
+        <button type="submit" class="submit-btn">Save Hero</button>
+    </form>
+
+    <div id="generatedLinkBox" style="display:none; margin-top:15px; padding:10px; background:#eef; border-radius:6px;">
+        <strong>Generated Public Link:</strong>
+        <input type="text" id="generatedLinkInput" readonly style="width:100%; margin-top:6px; padding:6px;">
+    </div>
+</section>

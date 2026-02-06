@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSI GRIET — Registration Form</title>
+
+<!-- Lexend Font -->
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --primary: #1e3a8a;     /* Deep blue */
+  --text-dark: #1e293b;   /* Slate dark */
+  --muted: #475569;       /* Slate mid */
+  --bg: #f8fafc;          /* Light background */
+  --border: #e2e8f0;      /* Soft border */
+  --radius: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lexend", sans-serif;
+  background: var(--bg);
+  color: var(--text-dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Top Header Layout */
+.site-header {
+  width: 100%;
+  background: white;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  gap: 18px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.header-inner {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-box img {
+  height: 52px;
+  user-select: none;
+}
+
+.header-center {
+  text-align: center;
+}
+
+.site-title {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1.2;
+}
+
+.site-sub {
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-weight: 400;
+  margin-top: 2px;
+}
+
+/* Form Wrapper */
+.wrapper {
+  width: 100%;
+  max-width: 1100px;
+  padding: 22px;
+  margin-top: 24px;
+}
+
+.card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 24px;
+  animation: fadeIn 0.28s ease;
+}
+
+h2 {
+  margin: 0 0 14px 0;
+  font-size: 1.15rem;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+iframe {
+  width: 100%;
+  height: 78vh;
+  border: none;
+  border-radius: var(--radius);
+}
+
+@media (max-width: 768px) {
+  .logo-box img { height: 44px; }
+  .site-title { font-size: 1.05rem; }
+  iframe { height: 80vh; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo-box">
+      <img src="/static/images/csi-logo.png" alt="CSI Logo">
+    </div>
+    <div class="header-center">
+      <h1 class="site-title">Computer Society of India</h1>
+      <span class="site-sub">Gokaraju Rangaraju Institute of Engineering &amp; Technology</span>
+    </div>
+    <div class="logo-box">
+      <img src="/static/images/griet-logo.png" alt="GRIET Logo">
+    </div>
+  </div>
+</header>
+
+<div class="wrapper">
+  <div class="card">
+    <h2>Registration Form</h2>
+    {{ embed|safe }}
+  </div>
+</div>
+
+</body>
+</html>

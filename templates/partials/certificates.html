@@ -1,0 +1,109 @@
+<main class="certificates-page">
+
+  <!-- 🌟 HERO SECTION -->
+   <section class="events-hero">
+    <div class="hero-blobs">
+      <div class="blob b1"></div>
+      <div class="blob b2"></div>
+      <div class="blob b3"></div>
+    </div>
+    <div class="events-hero-content">
+      <h1>Certificates Portal</h1>
+      <p>Access and verify you participation and winner certificates for all CSI GRIET events.</p>
+    </div>
+  </section>
+
+  <!-- 🌟 SEARCH SECTION -->
+  <section class="cert-search">
+    <h2>Download Your Certificate</h2>
+
+    <div class="form-group">
+      <label>Year</label>
+      <select id="certYear">
+        <option value="">Select Year</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Event</label>
+      <select id="certEvent">
+        <option value="">Select Event</option>
+      </select>
+    </div>
+
+    <div class="form-group autocomplete">
+      <label>Your Name</label>
+      <input
+        type="text"
+        id="certName"
+        placeholder="Start typing your name"
+        autocomplete="off"
+      >
+      <div id="nameSuggestions" class="suggestions"></div>
+    </div>
+
+    <button id="previewCertBtn" class="btn">
+      View Certificate
+    </button>
+  </section>
+
+  <!-- 🌟 PREVIEW + DOWNLOAD (HIDDEN INITIALLY) -->
+  <section id="certificatePreviewSection" style="display:none;">
+
+    <div id="certificatePreview" class="certificate-root">
+
+      <!-- HEADER -->
+      <div class="cert-header">
+        <img src="/static/images/csi-logo.png" class="cert-logo left" alt="CSI">
+        <div class="cert-title">
+          <h1>Computer Society of India</h1>
+          <h2>Gokaraju Rangaraju Institute of Engineering and Technology</h2>
+        </div>
+        <img src="/static/images/griet-logo.png" class="cert-logo right" alt="GRIET">
+      </div>
+
+      <hr class="cert-divider">
+
+      <!-- BODY -->
+      <div class="cert-body">
+        <h3 class="cert-type" id="certPreviewPosition">
+          Certificate of Participation
+        </h3>
+
+        <p class="cert-text">This is to certify that</p>
+
+        <h2 class="cert-name" id="certPreviewName">Participant Name</h2>
+
+        <p class="cert-text">
+          has successfully participated in the event
+        </p>
+
+        <h3 class="cert-event" id="certPreviewEvent">Event Name</h3>
+
+        <p class="cert-year">
+          conducted in the year <span id="certPreviewYear">2025</span>
+        </p>
+      </div>
+
+      <!-- FOOTER -->
+      <div class="cert-footer">
+  <div class="cert-sign">
+    <strong>CSI GRIET</strong>
+    Faculty Coordinator
+  </div>
+
+  <div class="cert-verified">
+    This certificate is system generated and verified
+  </div>
+</div>
+
+    </div>
+<div style="text-align:center; margin:30px 0;">
+  <button id="downloadCertBtn" class="btn">
+    Download Certificate
+  </button>
+</div>
+
+  </section>
+
+</main>

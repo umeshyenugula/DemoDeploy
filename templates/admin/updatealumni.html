@@ -1,0 +1,64 @@
+<main class="admin-main container">
+
+  <section class="alumni-update-section">
+    <h2>Add / Update Alumni Member</h2>
+
+    <form class="alumni-update-form">
+
+      <input type="hidden" id="alumniId">
+
+      <div class="form-group">
+        <label>Alumni Name</label>
+        <input type="text" id="alumniName" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label>Position</label>
+        <input type="text" id="alumniPosition" name="position" required>
+      </div>
+
+      <div class="form-group">
+        <label>Batch</label>
+        <select id="alumniBatch" name="batch" required>
+          <option value="">Select Batch</option>
+          <option value="2025">2025</option>
+          <option value="2024">2024</option>
+          <option value="2023">2023</option>
+          <option value="2022">2022</option>
+          <option value="2021">2021</option>
+<option value="2020">2020</option>
+<option value="2019">2019</option>
+<option value="2018">2018</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Photo</label>
+        <input type="file" id="alumniPhoto" name="photo" accept="image/*">
+      </div>
+
+      <button type="submit" class="submit-btn" id="alumniSubmitBtn">
+        Save Alumni Member
+      </button>
+
+    </form>
+  </section>
+
+  <hr class="divider">
+
+  <section class="alumni-list-section">
+    <h2>Current Alumni Members</h2>
+    <div class="alumni-list" id="alumniList"></div>
+  </section>
+<!-- Alumni-only fields -->
+<div class="form-group alumni-only" style="display:none;">
+  <label>Company</label>
+  <input type="text" id="updateCompany">
+</div>
+
+<div class="form-group alumni-only" style="display:none;">
+  <label>Pass-out Year</label>
+  <input type="number" id="updateYear">
+</div>
+
+</main>
